@@ -9,6 +9,11 @@ class Repository {
     this.dataSet = dataSet;
   }
 
+  /**
+   * async getBanks - read banks from CSV
+   *
+   * @return {type}
+   */
   async getBanks() {
     var bankStream = streamCSV(`./data/${this.dataSet}/banks.csv`);
     this.banks = [];
@@ -18,6 +23,11 @@ class Repository {
     }
   }
 
+  /**
+   * async getFacilities - read facilities from CSV
+   *
+   * @return {type}  description
+   */
   async getFacilities() {
     var facilitesStream = streamCSV(`./data/${this.dataSet}/facilities.csv`);
     this.facilitiesDict = {};
@@ -34,6 +44,11 @@ class Repository {
     }
   }
 
+  /**
+   * async getCovenants - read covenants from CSV
+   *
+   * @return {type}  description
+   */
   async getCovenants() {
     var covenantStream = streamCSV(`./data/${this.dataSet}/covenants.csv`);
     this.covenants = [];
