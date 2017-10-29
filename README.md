@@ -9,6 +9,8 @@ $ npm install
 $ node app.js {param} // parameter can be either "small" or "large" based on the dataset you want to use.
 ```
 
+> <b>NOTE</b>: This project uses ES7's Async/Await and hence requires Node version of 7.6.0 or above.
+
 ## Output
 
 The `assignments.csv` and `yields.csv` are created in the `out` directory.
@@ -36,3 +38,10 @@ POST /loan
 5. I would read a certain set of data records from the CSV and store them in memory and assign them to facilities as required. Since I have written this solution using NodeJS, the batch of loans are still going to be iterated over and assigned to facilities one after the other.
 
 6. With the same interest rate, we can break the tie if we consider more constraints on the facility such as the same state or the geographically closest state of the bank gets the business. We can also consider the difference in default likelihood as another option to break the tie.
+
+## TODO
+
+* Data structures for bank and covenants can be changed to optimize the algorithm. Currently, these use Arrays(Θ(n)) instead of hashtables that can give us Θ(1) on searches.
+* Add more comments.
+* Write some unit tests.
+* Dockerize for easier environment setup.
