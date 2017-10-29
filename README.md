@@ -21,7 +21,7 @@ The `assignments.csv` and `yields.csv` are created in the `out` directory.
 
 2. I will have to update the facility datastore to highlight these new restrictions and change the loan matching algorithm to include these additional constraints.
 
-3. 
+3. We will have to consider how, or if recently assigned loans can still benefit from new facilities being added in. In order to handle an ever increasing list of facilities, we can use better data storage options. Also, a redis implementation for a LRU cache can speed up processing of loans.
 
 4. The REST API to receive new Loans would include an endpoint wherein it can accept POST requests with the new loan information, assign it an id and run the matching algorithm accordingly. An Example,
 
@@ -37,7 +37,7 @@ POST /loan
 
 5. I would read a certain set of data records from the CSV and store them in memory and assign them to facilities as required. Since I have written this solution using NodeJS, the batch of loans are still going to be iterated over and assigned to facilities one after the other.
 
-6. With the same interest rate, we can break the tie if we consider more constraints on the facility such as the same state or the geographically closest state of the bank gets the business. We can also consider the difference in default likelihood as another option to break the tie.
+6. With the same interest rate, we can break the tie if we consider more constraints on the facility such as the same state or the geographically closest state of the bank gets the business. We can also consider the difference in max default likelihood amongst banks as another option to break the tie.
 
 ## TODO
 
