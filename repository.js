@@ -1,5 +1,9 @@
 const streamCSV = require('./lib/util/csv-stream.js');
 
+/**
+ * Class to read and manage all bank, facility and covenant data
+ */
+
 class Repository {
   constructor(dataSet) {
     this.dataSet = dataSet;
