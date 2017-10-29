@@ -1,5 +1,4 @@
 const streamCSV = require('./lib/util/csv-stream.js');
-const Loan = require('./lib/loan.js');
 const Repo = require('./repository.js');
 const ServiceLoan = require('./lib/serviceLoan.js');
 const createCSV = require('./lib/util/write_csv.js');
